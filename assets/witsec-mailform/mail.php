@@ -6,9 +6,9 @@ require "phpmailer.php";
 $to = "KhachHang@MissTea.VN";														// To Address
 $from = "KhachHang@MissTea.VN";													// From Address
 $fromName = "Test SDT";											// From Name
-$fromThem = ("1" == "1" ? true : false);					// Use Sender as From Address
-$fromThemReplyTo = ("0" == "1" ? true : false);	// Use Sender as Reply-To
-$fromNameThem = ("0" == "1" ? true : false);			// Use Sender Name as From Name
+$fromThem = ("0" == "1" ? true : false);					// Use Sender as From Address
+$fromThemReplyTo = ("1" == "1" ? true : false);	// Use Sender as Reply-To
+$fromNameThem = ("1" == "1" ? true : false);			// Use Sender Name as From Name
 $fromNameThemField = "{name}";						// Name of the field(s) that can contain the Sender Name
 $template = "Hi,<br><br>You have received a new message from your website.<br><br>{formdata}<br><br>Date: {date}<br>Remote IP: {ip}<br><br>---<br>Have a nice day.";											// Mail Template
 $autorespondSubjectPrefix = "Re:";			// Autorespond Form Subject Prefix

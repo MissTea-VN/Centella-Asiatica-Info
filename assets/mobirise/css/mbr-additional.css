@@ -691,24 +691,3 @@ a {
 .cid-sEEoj95t4A img {
   width: 100%;
 }
-.cid-sEFTOXSiZH {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: #ffffff;
-}
-.cid-sEFTOXSiZH .mbr-overlay {
-  background-color: #ffffff;
-  opacity: 0.4;
-}
-@media (min-width: 992px) {
-  .cid-sEFTOXSiZH form {
-    width: 50%;
-  }
-}
-.cid-sEFTOXSiZH form .mbr-section-btn {
-  text-align: center;
-  width: 100%;
-}
-.cid-sEFTOXSiZH form .mbr-section-btn .btn {
-  width: 100%;
-}

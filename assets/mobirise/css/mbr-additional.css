@@ -747,8 +747,8 @@ a {
   color: #ffffff;
 }
 .cid-sEEoj95t4A {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
   background-image: url("../../../assets/images/mbr-1359x1920.png");
 }
 @media (max-width: 991px) {
@@ -761,6 +761,10 @@ a {
 }
 .cid-sEEoj95t4A img {
   width: 100%;
+}
+.cid-sEEoj95t4A .container-fluid {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .cid-s5gZUynY2q .progress-container {
   z-index: 20000;

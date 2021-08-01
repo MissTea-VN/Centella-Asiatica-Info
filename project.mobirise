@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Rau Má Hòa Tan - MissTea",
-    "currentPage": "index.html",
+    "currentPage": "1.html",
     "theme": {
       "name": "mobirise5",
       "title": "Mobirise 5",
@@ -16,7 +16,7 @@
         "display1Font": "Philosopher",
         "display1Size": 4.6,
         "display2Font": "Lobster",
-        "display2Size": 3,
+        "display2Size": "4",
         "display5Font": "Alegreya",
         "display5Size": 2,
         "display7Font": "Signika",
@@ -73,7 +73,7 @@
         "url": "https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
       }
     ],
-    "uniqCompNum": 31,
+    "uniqCompNum": 35,
     "versionPublish": "5.3.15",
     "screenshot": "screenshot.png",
     "imageResize": true,
@@ -95,19 +95,19 @@
     "witsec-mailform-recaptcha-secretkey": "",
     "witsec-mailform-recaptcha-score": "0.5",
     "witsec-mailform-disable-button": false,
-    "mbrsiteDomain": "f45jeazzef",
+    "mbrsiteDomain": "dpytcdpxqf",
     "robotsSwitcher": false,
     "sitemapSwitcher": false,
     "sitemapSwitcherAuto": false,
     "siteUrl": false,
     "witsec-white-label": true,
-    "witsec-mailform": true,
+    "witsec-mailform": false,
     "cookiesAlert": false,
     "gdpr": false,
     "publishChangesOnly": false,
     "witsec-mailform-recaptcha-hidebadge": false,
     "witsec-mailform-to-alt": "",
-    "witsec-mailform-smtp": true,
+    "witsec-mailform-smtp": false,
     "witsec-mailform-smtp-debug": false,
     "witsec-mailform-smtp-host": "",
     "witsec-mailform-smtp-port": "",
@@ -120,99 +120,87 @@
   "pages": {
     "1.html": {
       "settings": {
-        "title": "Page 1",
-        "order": 1
+        "title": "Test Form",
+        "order": 1,
+        "meta_descr": "Test Form"
       },
       "components": [
         {
-          "alias": "witsec-mailform/components",
-          "_isSecondary": true,
+          "alias": false,
           "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            ".mbr-overlay": {
+              "background-color": "@overlayColor",
+              "opacity": "@overlayOpacity"
             },
             "& when (@bg-type = 'image')": {
               "background-image": "url(@bg-value)"
             },
-            ".showAlerts": {
-              "display": "block !important"
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
             },
-            ".rowflexrev": {
-              "display": "-webkit-flex"
-            },
-            "& when (@confirmationBelow)": {
-              ".ws-form-alerts": {
-                "margin-top": "1rem"
+            "form": {
+              "@media (min-width: 992px)": {
+                "width": "50%"
+              },
+              ".mbr-section-btn": {
+                "text-align": "center",
+                "width": "100%",
+                ".btn": {
+                  "width": "100%"
+                }
               }
             },
-            ".title": {
-              "margin-bottom": "2rem"
-            },
-            ".mbr-section-subtitle": {
-              "color": "#767676"
-            },
-            "textarea.form-control": {
-              "min-height": "188px"
-            },
-            "LABEL": {
-              "color": "#232323"
-            },
-            ".mbr-section-terms": {
-              "text-align": "center",
-              "color": "#232323",
-              "margin-bottom": "0px"
-            },
-            ".mbr-section-labels": {
-              "color": "#232323",
-              "padding": "0",
-              "margin-bottom": ".357em",
-              "text-align": "left"
-            },
-            ".mbr-section-autorespond": {
-              "text-align": "left",
-              "color": "#232323",
-              "margin-bottom": "0px"
-            },
-            ".mbr-section-gdpr": {
-              "text-align": "left",
-              "color": "#232323",
-              "margin-bottom": "0px"
-            },
-            ".alert": {
-              "margin-bottom": "0"
-            },
-            ".alert-success": {
-              "background-color": "@bgColorSuccess"
-            },
-            ".alert-danger": {
-              "background-color": "@bgColorError"
-            },
-            ".btn": {
-              "display": "inline-flex"
-            },
-            ".hidden": {
-              "display": "none"
-            },
-            ".mbr-alert-success": {
-              "text-align": "left",
+            ".mbr-section-title": {
               "color": "#ffffff"
             },
-            ".mbr-alert-danger": {
-              "text-align": "left",
+            ".mbr-section-subtitle": {
               "color": "#ffffff"
             }
           },
-          "_name": "witsec-mailform",
+          "_name": "form6",
           "_sourceTheme": "mobirise5",
-          "_customHTML": "<section class=\"witsec-mailform mbr-section\" plugins=\"witsec-mailform\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n  <mbr-parameters>\n  <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <header>Global settings can be changed in the <a href=\"#\" onclick=\"$('.projects-show').click()\">Site Settings</a> of your website</header>\n\n    <header>Size</header>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"6\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"6\">\n    <select title=\"Align Submit\" name=\"alignSubmit\">\n      <option value>Left</option>\n      <option value=\"align-center\" selected>Center</option>\n      <option value=\"align-right\">Right</option>\n    </select>\n\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Show Phone\" name=\"showPhone\" checked>\n    <input type=\"checkbox\" title=\"Show GDPR\" name=\"showGDPR\">\n    <input type=\"checkbox\" title=\"Show reCAPTCHA Terms\" name=\"showTerms\">\n    <input type=\"checkbox\" title=\"Show Labels\" name=\"showLabels\" checked>\n\n    <header>Placeholders</header>\n    <input type=\"text\" title=\"Name\" name=\"phName\" value>\n    <input type=\"text\" title=\"Email\" name=\"phEmail\" value>\n    <input type=\"text\" title=\"Phone\" name=\"phPhone\" value condition=\"showPhone\">\n    <input type=\"text\" title=\"Message\" name=\"phMessage\" value>\n\n    <header>Form Options</header>\n    <input type=\"text\" title=\"Alternative Recipient (use Address Book ID as defined in Site Settings)\" name=\"recipientID\" value>\n    <input type=\"text\" title=\"Subject\" name=\"txtSubject\" value=\"A message from your website.\">\n    <select title=\"Autorespond\" name=\"autorespond\">\n      <option value=\"0\" selected>Off</option>\n      <option value=\"1\">On</option>\n      <option value=\"2\">User Decision</option>\n    </select>\n    <select title=\"On Success\" name=\"onsuccess\">\n      <option value=\"0\">Stay</option>\n      <option value=\"1\" selected>Redirect</option>\n    </select>\n    <input type=\"checkbox\" title=\"Confirmation Below Form\" name=\"confirmationBelow\">\n\n    <header condition=\"onsuccess == 1\">RedirectURL</header>\n    <input type=\"text\" title=\"Redirect to\" name=\"redirectURL\" value=\"index.html\" condition=\"onsuccess == 1\">\n\n    <header>Mini Templates (optional)</header>\n    <textarea name=\"mtxt\" title=\"Normal Mail\"></textarea>\n    <textarea name=\"rtxt\" title=\"Response Mail\" condition=\"autorespond > 0\"></textarea>\n\n    <header>Alerts</header>\n    <input type=\"checkbox\" title=\"Show Alerts in Mobirise\" name=\"showAlerts\" checked>\n    <input type=\"color\" title=\"Success BG Color\" name=\"bgColorSuccess\" value=\"#70c770\" condition=\"onsuccess == 0\">\n    <input type=\"color\" title=\"Error BG Color\" name=\"bgColorError\" value=\"#ff4a52\">\n\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n        <input type=\"image\" title=\"Background Image\" value=\"../_images/background.jpg\" parallax>\n        <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n    </fieldset>\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#c1c1c1\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  <!-- End block parameters -->\n  </mbr-parameters>\n\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n  </div>\n  <div class=\"container\">\n    <div class=\"row justify-content-center\">\n      <div class=\"title col-12 col-lg-8\">\n        <h2 mbr-if=\"showTitle\" class=\"mbr-section-title align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\">\n          CONTACT FORM\n        </h2>\n        <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\">\n          Easily add independent contact forms to your website!\n        </h3>\n      </div>\n    </div>\n  </div>\n  <div class=\"container\">\n    <div class=\"row justify-content-center\">\n      <div class=\"media-container-column col-lg-8\">\n          <form class=\"mbr-form\">\n            <input type=\"hidden\" name=\"recipient\" value=\"{{recipientID}}\" mbr-if=\"recipientID\">\n            <input type=\"hidden\" name=\"subject\" value=\"{{txtSubject}}\">\n            <input type=\"hidden\" name=\"autorespond\" value=\"1\" mbr-if=\"autorespond=='1'\">\n            <input type=\"hidden\" name=\"redirectURL\" value=\"{{redirectURL}}\" mbr-if=\"onsuccess=='1'\">\n            <input type=\"hidden\" name=\"mtxt\" value=\"{{mtxt}}\" mbr-if=\"mtxt\">\n            <input type=\"hidden\" name=\"rtxt\" value=\"{{rtxt}}\" mbr-if=\"rtxt &amp;&amp; autorespond > 0\">\n\n            <div class=\"rowflexrev\" mbr-class=\"{ 'flex-column': !confirmationBelow, 'flex-column-reverse': confirmationBelow }\">\n              <div class=\"row\">\n                <div class=\"col-md-12 form-group ws-form-alerts\">\n                  <div hidden=\"hidden\" mbr-text class=\"alert alert-success col-12 mbr-alert-success mbr-fonts-style\" mbr-class=\"{showAlerts: !isPublish && showAlerts}\" mbr-theme-style=\"display-7\" data-app-edit=\"content\" data-app-selector=\".mbr-alert-success\" mbr-if=\"onsuccess=='0'\">Thanks for filling out the form!</div>\n                  <div hidden=\"hidden\" mbr-text class=\"alert alert-danger col-12 mbr-alert-danger mbr-fonts-style\" mbr-class=\"{showAlerts: !isPublish && showAlerts}\" mbr-theme-style=\"display-7\" data-app-edit=\"content\" data-app-selector=\".mbr-alert-danger\">An error occured. Please try again.</div>\n                </div>\n              </div>\n\n              <div class=\"row\">\n                <div class=\"col-md-4 form-group\" mbr-class=\"{'col-md-6': !showPhone}\">\n                  <p mbr-text mbr-theme-style=\"display-7\" class=\"mbr-section-labels mbr-fonts-style\" data-app-edit=\"content\" data-app-selector=\".mbr-section-labels\" mbr-if=\"showLabels\">Name</p>\n                  <input type=\"text\" name=\"name\" placeholder=\"{{phName}}\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control\">\n                </div>\n                <div class=\"col-md-4 form-group\" mbr-class=\"{'col-md-6': !showPhone}\">\n                  <p mbr-text mbr-theme-style=\"display-7\" class=\"mbr-section-labels mbr-fonts-style\" data-app-edit=\"content\" data-app-selector=\".mbr-section-labels\" mbr-if=\"showLabels\">Email</p>\n                  <input type=\"email\" name=\"email\" placeholder=\"{{phEmail}}\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control\">\n                </div>\n                <div mbr-if=\"showPhone\" class=\"col-md-4 form-group\">\n                  <p mbr-text mbr-theme-style=\"display-7\" class=\"mbr-section-labels mbr-fonts-style\" data-app-edit=\"content\" data-app-selector=\".mbr-section-labels\" mbr-if=\"showLabels\">Phone</p>\n                  <input type=\"tel\" name=\"phone\" placeholder=\"{{phPhone}}\" mbr-theme-style=\"display-7\" class=\"form-control\">\n                </div>\n                <div class=\"col-md-12 form-group\">\n                  <p mbr-text mbr-theme-style=\"display-7\" class=\"mbr-section-labels mbr-fonts-style\" data-app-edit=\"content\" data-app-selector=\".mbr-section-labels\" mbr-if=\"showLabels\">Message</p>\n                  <textarea name=\"message\" placeholder=\"{{phMessage}}\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control\"></textarea>\n                </div>\n                <div mbr-if=\"autorespond=='2' || showGDPR\" class=\"col-md-12 justify-content-center form-group\">\n                  <p class=\"mbr-section-autorespond mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-edit=\"content\" data-app-selector=\".mbr-section-autorespond\" mbr-if=\"autorespond=='2'\">\n                    <input type=\"checkbox\" name=\"autorespond\" value=\"1\">\n                    <label class=\"mbr-section-autorespond mbr-fonts-style\">Send me a copy</label>\n                  </p>\n                  <p class=\"mbr-section-gdpr mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-edit=\"content\" data-app-selector=\".mbr-section-gdpr\" mbr-if=\"showGDPR\">\n                    <input type=\"checkbox\" name=\"GDPR\" value=\"1\" required>\n                    <label class=\"mbr-section-gdpr mbr-fonts-style\">By continuing you agree to our <a href=\"terms.html\">Terms of Service</a> and <a href=\"policy.html\">Privacy Policy</a>.</label></p>\n                </div>\n                <div mbr-if=\"showTerms\" class=\"col-md-12 justify-content-center form-group\">\n                  <p class=\"mbr-section-terms mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-edit=\"content\" data-app-selector=\".mbr-section-terms\">\n                    This form uses Google's reCAPTCHA. By continuing you agree to the <a href=\"https://policies.google.com/privacy\" target=\"_blank\">Privacy</a> and <a href=\"https://policies.google.com/terms\" target=\"_blank\">Terms</a>.\n                  </p>\n                </div>\n                <div class=\"g-recaptcha col-md-12 form-group\" mbr-class=\"{'hidden': !isPublish}\"></div>\n                <div class=\"col-md-12 input-group-btn {{alignSubmit}}\" mbr-buttons=\"true\" mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove,-mbrBtnLink,-mbrBtnAdd\"><a type=\"submit\" class=\"btn btn-primary btn-form\" data-app-placeholder=\"Type Text\">SEND FORM</a></div>\n              </div>\n            </div>\n        </form>\n      </div>\n    </div>\n  </div>\n</section>",
-          "_cid": "sEGb7iWHeK",
-          "_anchor": "witsec-mailform-u",
+          "_customHTML": "<section data-bs-version=\"5\" class=\"form6\" group=\"Forms\" plugins=\"formstyler, datepicker\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"10\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"10\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/mbr-1920x1186.jpg\" selected>\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"hidden\" name=\"usedRecaptcha\" value=\"false\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"(overlay && bg.type=='image')\"></div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"mbr-section-head\" mbr-if=\"showTitle || showSubtitle\">\n            <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\"><b>Rau Má Hòa Tan</b><br><b>Đập Tan Cơn Khát</b><br></h3>\n            <h4 class=\"mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">Để đảm bảo quyền lợi của khách hàng, xin nhập đúng thông tin.<br>Chúng tôi cam kết không sử dụng thông tin vào một đích khác.</h4>\n        </div>\n        <div class=\"row justify-content-center mt-4\">\n            <div mbr-form class=\"col-lg-8 mx-auto mbr-form\">\n                <form action=\"KhachHang@MissTea.VN\" name=\"Form Name\" method=\"POST\" data-rcpha_sitekey=\"\" data-rcpha_secretkey=\"\" class=\"mbr-form form-with-styler mx-auto\">\n                    <div class=\"row\">\n                        <div hidden=\"hidden\" data-form-alert class=\"alert alert-success col-12\">Cảm ơn bạn đã quan tâm sản phẩm của chúng tôi!</div>\n                        <div hidden=\"hidden\" data-form-alert-danger class=\"alert alert-danger col-12\">Oops...! some\n                            problem!</div>\n                    </div>\n                    <div class=\"dragArea row\">\n                        <div class=\"col-lg-12 col-md-12 col-sm-12 form-group mb-3\" data-for=\"name\" hidden=\"hidden\">\n                            <input type=\"text\" name=\"name\" placeholder=\"Name\" data-form-field=\"name\" class=\"form-control\" value hidden=\"hidden\">\n                        </div>\n                        <div class=\"col-lg-12 col-md-12 col-sm-12 form-group mb-3\" data-for=\"email\" hidden=\"hidden\">\n                            <input type=\"email\" name=\"email\" placeholder=\"Email\" data-form-field=\"email\" class=\"form-control\" value hidden=\"hidden\">\n                        </div>\n                        <div data-for=\"phone\" class=\"col-lg-12 col-md-12 col-sm-12 form-group mb-3\">\n                            <input type=\"tel\" name=\"phone\" placeholder=\"Vui lòng nhập số điện thoại\" data-form-field=\"phone\" class=\"form-control\" value>\n                        </div>\n                        <div class=\"col-auto mbr-section-btn align-center\" mbr-buttons=\"true\" mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove,-mbrLink,-mbrBtnRemove,-mbrBtnAdd\"><a type=\"submit\" class=\"btn btn-success\" data-app-placeholder=\"Type Text\">Xác Nhận</a></div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sEPD0ZgpsT",
+          "_anchor": "form6-w",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
           "_params": {}
+        },
+        {
+          "_params": {
+            "modalName": "Customer-Info",
+            "modalSize": "medium",
+            "modalHeader": true,
+            "modalTitle": "Thông Tin Khách Hàng",
+            "modalBody": "- Để đảm bảo quyền lợi của khách hàng, xin nhập đúng thông tin.\n- Chúng tôi cam kết không sử dụng thông tin vào một đích khác.",
+            "modalBodyHTML": true,
+            "modalFooter": false,
+            "modalCloseBtn": true,
+            "modalCloseText": "Nhập Số Điện Thoại",
+            "modalLink": false,
+            "modalLinkUrl": "https://mobirise.com/",
+            "modalLinkText": "Visit Mobirise",
+            "modalLinkNewWindow": true,
+            "modalVerticalCenter": true,
+            "modalFade": true,
+            "modalAutoOpen": true,
+            "modalAutoOpenOnce": true,
+            "modalAutoOpenGDPR": false,
+            "modalAutoOpenDelay": 0
+          },
+          "modalTest": "<div class=\"mbr-section-btn\">\n  <a href=\"#\" class=\"btn btn-primary display-4\" data-toggle=\"modal\" data-target=\"#Customer-Info\">Preview Customer-Info</a>\n  <a href=\"#\" class=\"btn btn-primary display-4\" data-toggle=\"modal\" data-target=\"#Customer-Info-howtouse\">How to use Customer-Info</a>\n</div>\n<div class=\"modal fade\" id=\"Customer-Info-howtouse\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"Customer-Info-howtouseLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog\" role=\"document\" style=\"height:auto\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\" id=\"Customer-Info-howtouseLabel\">How to use?</h5>\n        <a href=\"\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></a>\n      </div>\n      <div class=\"modal-body\">\n        Using your new modal is very easy. Simply create a new link, then click the \"...\" tab and enter the following as custom URL:<br /><br />\n        <code>javascript:OpenModal('Customer-Info')</code>\n      </div>\n      <div class=\"modal-footer\">\n        <div class=\"mbr-section-btn\"><a href=\"#\" class=\"btn btn-secondary display-4\" data-dismiss=\"modal\">Close</a></div>\n      </div>\n    </div>\n  </div>\n</div>",
+          "modalBody": "- Để đảm bảo quyền lợi của khách hàng, xin nhập đúng thông tin.\n- Chúng tôi cam kết không sử dụng thông tin vào một đích khác.",
+          "alias": "witsec-modal-window",
+          "_tags": [
+            "Extension"
+          ],
+          "_name": "witsec-modal-window-block",
+          "_sourceTheme": "mobirise5",
+          "_anchor": "witsec-modal-window-block-x",
+          "modalWindow": "<div class=\"modal fade\" id=\"Customer-Info\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"Customer-InfoLabel\" aria-hidden=\"true\">  <div class=\"modal-dialog  modal-dialog-centered\" style=\"height:auto\" role=\"document\">    <div class=\"modal-content\"><div class=\"modal-header\">  <h5 class=\"no-anim modal-title\" id=\"Customer-InfoLabel\">Thông Tin Khách Hàng</h5>  <a href=\"#\" class=\"no-anim close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></a></div><div class=\"modal-body\" id=\"Customer-Info_body\">- Để đảm bảo quyền lợi của khách hàng, xin nhập đúng thông tin.\n- Chúng tôi cam kết không sử dụng thông tin vào một đích khác.</div>    </div>  </div></div><script>document.addEventListener(\"DOMContentLoaded\", function() {  $(\"#Customer-Info\").on(\"hidden.bs.modal\", function () {    var html = $( \"#Customer-Info_body\" ).html();    $( \"#Customer-Info_body\" ).empty();    $( \"#Customer-Info_body\" ).append(html);  })});</script>"
         }
       ]
     },

@@ -683,7 +683,7 @@ a {
   transition: color 0.6s;
 }
 .cid-sEPD0ZgpsT {
-  padding-top: 10rem;
+  padding-top: 7rem;
   padding-bottom: 10rem;
   background-image: url("../../../assets/images/mbr-1920x1186.jpg");
 }
@@ -707,7 +707,8 @@ a {
   color: #ffffff;
 }
 .cid-sEPD0ZgpsT .mbr-section-subtitle {
-  color: #ffffff;
+  color: #920101;
+  background-color: #ffffff;
 }
 .cid-sEEoj95t4A {
   padding-top: 0rem;
